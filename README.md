@@ -346,6 +346,30 @@ Copy code
 git remote set-url origin https://github.com/username/your-repository.git
 Check for Network Issues
 
+-------------
+
+<Git commands>
+-------------------------------
+<tagging>
+- git checkout -b BRANCH_NAME
+- git add .
+- git commit -m "Your commit message"
+- git push origin BRANCH_NAME
+- git tag -f -a kava_2222-10-v0.25.0-7638000 -m "mainnet-upgrade"
+- git push origin --tags -f
+<new branch>
+- git checkout -b NEW_BRANCH (creates new branch based on master branch!)
+<status clean>
+- git clean -fdx
+<cleans git credential cache>
+- git config --global credential.helper cache
+- git config --global credential.helper 'cache --timeout=3600'
+<cherry pick>
+- $ git cherry-pick <commit-hash> ( pick and choose individual commits and apply them to a different branch, rather than merging entire branches)
+- git clone https://TOKEN@github_url ( e.g. https://token@github.com/username/Ansible-Study.git)
+- git reset --hard origin
+
+
 ## Reference:
 
 [Git documentation](https://git-scm.com/doc) - git main documentation
