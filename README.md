@@ -1,6 +1,8 @@
 # git-help
 Git management and troubleshooting
 
+### Troubleshooting
+
 User
 i was using private github repositories without issue locally! but today i've changed my personal access token on github , and all of a sudden all my local private git repos are showing following error:
 
@@ -353,7 +355,7 @@ Check for Network Issues
 | `git checkout -b <branch_name>` | used to change to given branch |
 | `git add .` | used to add modified changes to branch | 
 | `git commit -m "your commit message"` | used to commit to modified branch |
-- git push origin BRANCH_NAME
+| `git push origin <branch_name>` | used to push branch to git |
 - git tag -f -a kava_2222-10-v0.25.0-7638000 -m "mainnet-upgrade"
 - git push origin --tags -f
 <new branch>
