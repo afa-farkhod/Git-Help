@@ -1,7 +1,7 @@
 # git-help
 Git management and troubleshooting
 
-### Troubleshooting
+## Troubleshooting
 
 User
 i was using private github repositories without issue locally! but today i've changed my personal access token on github , and all of a sudden all my local private git repos are showing following error:
@@ -348,7 +348,7 @@ Copy code
 git remote set-url origin https://github.com/username/your-repository.git
 Check for Network Issues
 
-### Git commands
+## Git commands
 
 | Command | Description |
 | --- | --- |
