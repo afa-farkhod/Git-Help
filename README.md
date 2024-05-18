@@ -346,14 +346,13 @@ Copy code
 git remote set-url origin https://github.com/username/your-repository.git
 Check for Network Issues
 
--------------
+### Git commands
 
-<Git commands>
--------------------------------
-<tagging>
-- git checkout -b BRANCH_NAME
-- git add .
-- git commit -m "Your commit message"
+| Command | Description |
+| --- | --- |
+| `git checkout -b <branch_name>` | used to change to given branch |
+| `git add .` | used to add modified changes to branch | 
+| `git commit -m "your commit message"` | used to commit to modified branch |
 - git push origin BRANCH_NAME
 - git tag -f -a kava_2222-10-v0.25.0-7638000 -m "mainnet-upgrade"
 - git push origin --tags -f
