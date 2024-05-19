@@ -356,7 +356,7 @@ Check for Network Issues
 | `git add .` | used to add modified changes to branch | 
 | `git commit -m "your commit message"` | used to commit to modified branch |
 | `git push origin <branch_name>` | used to push branch to git |
-- git tag -f -a kava_2222-10-v0.25.0-7638000 -m "mainnet-upgrade"
+| `git tag -f -a test-tag-name -m "test-tag-name-case"` | used to tag the particular branch with comment |
 - git push origin --tags -f
 <new branch>
 - git checkout -b NEW_BRANCH (creates new branch based on master branch!)
