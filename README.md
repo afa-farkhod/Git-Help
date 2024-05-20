@@ -359,9 +359,7 @@ Check for Network Issues
 | `git tag -f -a test-tag-name -m "test-tag-name-case"` | used to tag the particular branch with comment |
 | `git push origin --tags -f` | push tag to git |
 | `git checkout -b <branch_name>` | creates new branch based on master branch |
-<status clean>
-- git clean -fdx
-<cleans git credential cache>
+| `git clean -fdx` | cleans git credential cache |
 - git config --global credential.helper cache
 - git config --global credential.helper 'cache --timeout=3600'
 <cherry pick>
