@@ -357,7 +357,7 @@ Check for Network Issues
 | `git commit -m "your commit message"` | used to commit to modified branch |
 | `git push origin <branch_name>` | used to push branch to git |
 | `git tag -f -a test-tag-name -m "test-tag-name-case"` | used to tag the particular branch with comment |
-- git push origin --tags -f
+| `git push origin --tags -f` | push tag to git |
 <new branch>
 - git checkout -b NEW_BRANCH (creates new branch based on master branch!)
 <status clean>
