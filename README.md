@@ -360,7 +360,7 @@ Check for Network Issues
 | `git push origin --tags -f` | push tag to git |
 | `git checkout -b <branch_name>` | creates new branch based on master branch |
 | `git clean -fdx` | cleans git credential cache |
-- git config --global credential.helper cache
+| `git config --global credential.helper cache` | cleans the git cache in local |
 - git config --global credential.helper 'cache --timeout=3600'
 <cherry pick>
 - $ git cherry-pick <commit-hash> ( pick and choose individual commits and apply them to a different branch, rather than merging entire branches)
