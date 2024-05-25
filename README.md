@@ -363,7 +363,7 @@ Check for Network Issues
 | `git config --global credential.helper cache` | cleans the git cache in local |
 | `git config --global credential.helper 'cache --timeout=3600'` | set the local cache cleaning time |
 | `git cherry-pick <commit-hash>` | pick and choose individual commits and apply them to a different branch, rather than merging entire branches |
-- git clone https://TOKEN@github_url ( e.g. https://token@github.com/username/Ansible-Study.git)
+| `git clone https://TOKEN@github_url` | e.g. https://token@github.com/username/Ansible-Study.git |
 - git reset --hard origin
 
 
