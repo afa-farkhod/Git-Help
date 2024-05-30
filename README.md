@@ -15,7 +15,7 @@ Git management and troubleshooting
     - Credentials are typically managed by the Windows Credential Manager.
     - Open Credential Manager from the Control Panel.
     - Go to Windows Credentials.
-    - Find the entry for git:https://github.com.
+    - Find the entry for `git:https://github.com`
     - Update the entry with your new token.
   - For Linux:
     - If you're using a credential helper, such as git-credential-store or git-credential-cache, you can update your credentials via command line:
@@ -35,54 +35,28 @@ warning: credential.helper has multiple values
 ```
 git config --global --get-all credential.helper
 ```
-Remove Each Credential Helper
-If the above command lists multiple helpers, you'll need to unset each one individually. You can do this by repeating the unset command for each helper listed:
-
-bash
-Copy code
+  - Remove Each Credential Helper
+    - If the above command lists multiple helpers, you'll need to unset each one individually. You can do this by repeating the unset command for each helper listed:
+```
 git config --global --unset credential.helper
-Run this command multiple times until all entries are removed.
-
-Set a New Credential Helper
-After clearing the old settings, set a new credential helper that will prompt you to enter your credentials, which can then be saved:
-
-bash
-Copy code
+```
+  - Set a New Credential Helper
+    - After clearing the old settings, set a new credential helper that will prompt you to enter your credentials, which can then be saved(cache is a simple helper that temporarily stores credentials in memory for a short time):
+```
 git config --global credential.helper cache
-cache is a simple helper that temporarily stores credentials in memory for a short time.
-Alternatively, you can use store to save credentials to a plain text file on disk:
-bash
-Copy code
-git config --global credential.helper store
-Updating Credentials
-After you've set up the credential helper, the next time you interact with the remote repository (e.g., git push or git pull), Git should prompt you for your username and password. Enter your GitHub username and use your personal access token as the password. This will store the new token in your selected credential storage method.
-
-Ensure Security
-If you choose store, be aware that your token will be stored in plain text. Ensure your computer is secure and consider using a more secure method if necessary.
-Regularly review your token's permissions and regenerate it if you suspect it has been compromised.
-By following these steps, you should be able to resolve the issue with multiple credential helpers and update your Git configuration to use your new personal access token effectively.
-
-User
-when i run this command: git config --global --get-all credential.helper
-
-getting the following output:
+```
+- While running this command: `git config --global --get-all credential.helper` , and get the following output:
+```
 store
 store
-
-how to remove them?
-ChatGPT
-The output you see, with two store entries for the credential.helper, indicates that the store credential helper has been set multiple times in your global Git configuration. To remove these duplicate entries, you'll need to use the --unset command for each instance that appears.
-
-Here’s how you can remove the duplicated store entries:
-
-1. Unset Multiple Entries
-Since you have two store entries, you need to run the unset command twice to remove each one:
-
-bash
-Copy code
+```
+  - The output you see, with two store entries for the credential.helper, indicates that the store credential helper has been set multiple times in your global Git configuration. To remove these duplicate entries, you'll need to use the --unset command for each instance that appears.
+  - Here’s how you can remove the duplicated store entries:
+  - Since you have two store entries, you need to run the unset command twice to remove each one(run the --unset command as many times as needed until all duplicate entries are removed. Each execution of the command removes one instance of the configuration):
+```
 git config --global --unset credential.helper
 git config --global --unset credential.helper
-Run the --unset command as many times as needed until all duplicate entries are removed. Each execution of the command removes one instance of the configuration.
+```
 
 2. Verify the Configuration
 After running the commands to unset the credential helpers, verify that all entries have been removed:
