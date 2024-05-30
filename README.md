@@ -57,30 +57,19 @@ store
 git config --global --unset credential.helper
 git config --global --unset credential.helper
 ```
-
-2. Verify the Configuration
-After running the commands to unset the credential helpers, verify that all entries have been removed:
-
-bash
-Copy code
-git config --global --get-all credential.helper
-This command should not return any output if all entries have been successfully removed.
-
-3. Reconfigure Credential Helper (if desired)
-Once the duplicates are removed, you can reconfigure a single credential helper. Here are a couple of options:
-
-Use store to save credentials on disk:
-bash
-Copy code
+  - Once the duplicates are removed, you can reconfigure a single credential helper. Here are a couple of options:
+    - Use store to save credentials on disk:
+```
 git config --global credential.helper store
-Use cache to temporarily cache credentials in memory:
-bash
-Copy code
-git config --global credential.helper cache
-4. Using Your Personal Access Token
-After configuring the credential helper, the next time you interact with GitHub (via commands like git push or git pull), you should be prompted to enter your username and password. Use your GitHub username and your new personal access token as the password. This information will then be stored according to the method you set with the credential.helper configuration.
+```
+- After configuring the credential helper, the next time you interact with GitHub (via commands like git push or git pull), you should be prompted to enter your username and password. Use your GitHub username and your new personal access token as the password. This information will then be stored according to the method you set with the credential.helper configuration.
 
-This should help you manage and update your GitHub credentials correctly in your local Git configuration. If any more issues arise, feel free to ask for further assistance.
+
+
+
+
+
+
 
 User
 i ran the following command several times! but keep getting the same log!:
