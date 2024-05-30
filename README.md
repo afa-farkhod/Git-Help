@@ -12,17 +12,15 @@ Git management and troubleshooting
     - Find the entry (it should be a web form password or Internet password).
     - Update the password field with your new token.
   - For Windows:
-Credentials are typically managed by the Windows Credential Manager.
-Open Credential Manager from the Control Panel.
-Go to Windows Credentials.
-Find the entry for git:https://github.com.
-Update the entry with your new token.
-For Linux:
-If you're using a credential helper, such as git-credential-store or git-credential-cache, you can update your credentials via command line:
-bash
-Copy code
-git config --global --unset credential.helper
-git config --global credential.helper store
+    - Credentials are typically managed by the Windows Credential Manager.
+    - Open Credential Manager from the Control Panel.
+    - Go to Windows Credentials.
+    - Find the entry for git:https://github.com.
+    - Update the entry with your new token.
+  - For Linux:
+    - If you're using a credential helper, such as git-credential-store or git-credential-cache, you can update your credentials via command line:
+      - `git config --global --unset credential.helper`
+      - `git config --global credential.helper store`
 2. Using the Git Command Line
 You can also update your token directly for each repository using the command line:
 
