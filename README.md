@@ -21,49 +21,20 @@ Git management and troubleshooting
     - If you're using a credential helper, such as git-credential-store or git-credential-cache, you can update your credentials via command line:
       - `git config --global --unset credential.helper`
       - `git config --global credential.helper store`
-2. Using the Git Command Line
-You can also update your token directly for each repository using the command line:
 
-First, make sure Git prompts you for the username and password:
-bash
-Copy code
-git config --global --unset credential.helper
-Next time you push or pull, Git will ask for your credentials, and you can input your username and your new personal access token as the password.
-3. Update Your Repository URLs (if necessary)
-Ensure your repository URLs are using the HTTPS protocol, as SSH does not use personal access tokens:
-
-Check the current URL:
-bash
-Copy code
-git remote -v
-If it’s not using HTTPS, switch to HTTPS by updating the remote URL:
-bash
-Copy code
-git remote set-url origin https://github.com/username/repo.git
-Replace username and repo with your GitHub username and repository name.
-4. Verify Authentication
-After updating, try pulling from your repository:
-bash
-Copy code
-git pull
-This will confirm whether the new token is working properly.
-By following these steps, you should be able to resolve the authentication issues and continue working with your repositories. If you continue to experience issues, make sure that the token you generated has the appropriate scopes/permissions.
-
-User
- git config --global --unset credential.helper                                             1 ✘
+- When you get the following type of error log:
+```
+git config --global --unset credential.helper                   
 warning: credential.helper has multiple values
-ChatGPT
-The warning credential.helper has multiple values indicates that multiple credential helpers have been set in your Git configuration. This can happen if you've configured Git to use different credential helpers at different levels (local, global, system) or multiple entries were added to the global configuration.
-
-To resolve this and ensure your new personal access token is used, you might want to clear all credential helper settings and then reconfigure one that will use your new token. Here's how you can do that:
-
-Clearing Multiple Credential Helpers
-List Current Configurations
-First, check what credential helpers are configured:
-
-bash
-Copy code
+```
+  - The warning `credential.helper` has multiple values indicates that multiple credential helpers have been set in your Git configuration. This can happen if you've configured Git to use different credential helpers at different levels (local, global, system) or multiple entries were added to the global configuration.
+  - To resolve this and ensure your new personal access token is used, you might want to clear all credential helper settings and then reconfigure one that will use your new token. Here's how you can do that:
+    - Clearing Multiple Credential Helpers
+    - List Current Configurations
+    - First, check what credential helpers are configured:
+```
 git config --global --get-all credential.helper
+```
 Remove Each Credential Helper
 If the above command lists multiple helpers, you'll need to unset each one individually. You can do this by repeating the unset command for each helper listed:
 
