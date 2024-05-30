@@ -3,31 +3,15 @@ Git management and troubleshooting
 
 ## Troubleshooting
 
-- In case of changing the GitHub `PAT`(Private Access Token) (MacOS env)
-
-User
-i was using private github repositories without issue locally! but today i've changed my personal access token on github , and all of a sudden all my local private git repos are showing following error:
-
-remote: Repository not found.
-fatal: repository not found
-
-is there any way that i can register my personal access token to locally so that all my private git repos work without problem, or did i do something wrong in the beginning?
-
-ChatGPT
-It sounds like you need to update the credentials that your local Git client is using to authenticate with GitHub. When you changed your personal access token on GitHub, your old token that was stored locally is no longer valid, hence the authentication failures and the "repository not found" errors.
-
-Here’s how you can update your local setup to use the new personal access token:
-
-1. Update your Git credentials
-Depending on your OS and how Git was configured, your token may be stored in a credential manager or directly in the repository configuration.
-
-For macOS:
-The macOS Keychain usually manages GitHub credentials. You can update your token here:
-Open Keychain Access.
-Search for github.com.
-Find the entry (it should be a web form password or Internet password).
-Update the password field with your new token.
-For Windows:
+- In case of changing the GitHub `PAT`(Private Access Token) (MacOS env) to keep further access the private repositories need to add the new PAT to `Key chain`
+- Update Git credentials. Depending on your OS and how Git was configured, your token may be stored in a credential manager or directly in the repository configuration.
+  - For macOS:
+    - The macOS Keychain usually manages GitHub credentials. You can update your token here:
+    - Open Keychain Access.
+    - Search for github.com.
+    - Find the entry (it should be a web form password or Internet password).
+    - Update the password field with your new token.
+  - For Windows:
 Credentials are typically managed by the Windows Credential Manager.
 Open Credential Manager from the Control Panel.
 Go to Windows Credentials.
