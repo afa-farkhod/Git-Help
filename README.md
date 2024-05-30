@@ -3,6 +3,8 @@ Git management and troubleshooting
 
 ## Troubleshooting
 
+- In case of changing the GitHub `PAT`(Private Access Token) (MacOS env)
+
 User
 i was using private github repositories without issue locally! but today i've changed my personal access token on github , and all of a sudden all my local private git repos are showing following error:
 
