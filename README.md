@@ -66,42 +66,6 @@ git config --global credential.helper store
 
 
 
-but how to store my github personal access token? 
-ChatGPT
-To store your GitHub personal access token securely in your Git configuration, you can use the credential.helper setting along with the store helper. This will securely store your token on your local machine so you don't have to enter it every time you interact with GitHub. Here's how you can do it:
-
-Run the Command:
-Open your terminal or command prompt and execute the following command:
-
-bash
-Copy code
-git config --global credential.helper store
-This sets the credential helper to store, which will store your credentials in plaintext in a local file.
-
-Store Your Token:
-After setting the credential helper, the next time you interact with a remote repository on GitHub, Git will prompt you to enter your username and password. Use your GitHub username as the username, and enter your personal access token as the password when prompted.
-
-Automatic Storage:
-Once you've entered your username and token, Git will automatically store these credentials in a plaintext file on your local machine, usually in ~/.git-credentials on Linux and macOS, or %USERPROFILE%\.git-credentials on Windows.
-
-Verify the Storage:
-You can verify that your token has been stored by checking the contents of the .git-credentials file. You can open it with a text editor to see if your GitHub credentials are stored there.
-
-Optional: Secure Storage:
-Storing credentials in plaintext can be insecure, especially on shared or public machines. If security is a concern, consider using a more secure credential helper or enabling two-factor authentication (2FA) on your GitHub account.
-
-By following these steps, your GitHub personal access token should be securely stored on your local machine, allowing you to interact with your private repositories without having to enter your credentials each time. Remember to keep your personal access token confidential and avoid sharing it with others.
-
-User
-there is no any git-credentials on macos ! does that mean it didn't work correctly?! how can i store credentials manually?!
-ChatGPT
-If you don't see a .git-credentials file and you've configured the store credential helper, it could mean that you haven't yet attempted to authenticate with GitHub since setting it, or there could be an issue with how the credentials were supposed to be stored. On macOS, you might also be using a different credential management system like the macOS Keychain, depending on your Git configuration.
-
-To manually store your credentials in the .git-credentials file, you can follow these steps:
-
-Manually Creating the .git-credentials File
-Locate or Create the File:
-
 Open Terminal.
 Check if the file exists in your home directory with ls -la ~. If it’s not visible, you can create it manually.
 Use a text editor to open or create this file. You can use nano for this purpose:
