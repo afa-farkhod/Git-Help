@@ -67,7 +67,8 @@ git config --global credential.helper store
 --------------------------------------------------------------------------------------------------------
 
 - What is GitHub gist?
-  - Gists provide a simple way to share code snippets with others. Every gist is a Git repository, which means that it can be forked and cloned [Guid Link](https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists)
+  - Gists provide a simple way to share code snippets with others. Every gist is a Git repository, which means that it can be forked and cloned [Guide Link](https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists).
+  - If you are signed in to GitHub when you create a gist, the gist will be associated with your account and you will see it in your list of gists when you navigate to your [gist home page](https://gist.github.com/)
 
 --------------------------------------------------------------------------------------------------------
 
