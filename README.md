@@ -21,7 +21,6 @@ Git management and troubleshooting
     - If you're using a credential helper, such as git-credential-store or git-credential-cache, you can update your credentials via command line:
       - `git config --global --unset credential.helper`
       - `git config --global credential.helper store`
-
 - When you get the following type of error log:
 ```
 git config --global --unset credential.helper                   
@@ -65,6 +64,8 @@ git config --global credential.helper store
 - After configuring the credential helper, the next time you interact with GitHub (via commands like git push or git pull), you should be prompted to enter your username and password. Use your GitHub username and your new personal access token as the password. This information will then be stored according to the method you set with the credential.helper configuration.
 
 - MacOS `Keychain`: macOS users can use the Keychain to securely store and manage passwords. 
+
+--------------------------------------------------------------------------------------------------------
 
 ## Git commands
 
