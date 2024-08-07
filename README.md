@@ -64,6 +64,10 @@ git config --global credential.helper store
 - After configuring the credential helper, the next time you interact with GitHub (via commands like git push or git pull), you should be prompted to enter your username and password. Use your GitHub username and your new personal access token as the password. This information will then be stored according to the method you set with the credential.helper configuration.
 
 - MacOS `Keychain`: macOS users can use the Keychain to securely store and manage passwords. 
+--------------------------------------------------------------------------------------------------------
+
+- What is GitHub gist?
+  - Gists provide a simple way to share code snippets with others. Every gist is a Git repository, which means that it can be forked and cloned [Guid Link](https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists)
 
 --------------------------------------------------------------------------------------------------------
 
