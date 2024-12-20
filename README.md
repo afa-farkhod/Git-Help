@@ -4,7 +4,7 @@ Git management and troubleshooting
 ## Troubleshooting
 
 - In case of changing the GitHub `PAT`(Private Access Token) (MacOS env) to keep further access the private repositories need to add the new PAT to `Key chain`
-- Update Git credentials. Depending on your OS and how Git was configured, your token may be stored in a credential manager or directly in the repository configuration.
+- Update Git credentials. Depending on your OS and how Git was configured your token may be stored in a credential manager or directly in the repository configuration.
   - For macOS:
     - The macOS Keychain usually manages GitHub credentials. You can update your token here:
     - Open Keychain Access.
