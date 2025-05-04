@@ -63,7 +63,20 @@ git config --global credential.helper store
 ```
 - After configuring the credential helper, the next time you interact with GitHub (via commands like git push or git pull), you should be prompted to enter your username and password. Use your GitHub username and your new personal access token as the password. This information will then be stored according to the method you set with the credential.helper configuration.
 
-- MacOS `Keychain`: macOS users can use the Keychain to securely store and manage passwords. 
+- MacOS `Keychain`: macOS users can use the Keychain to securely store and manage passwords.
+
+--------------------------------------------------------------------------------------------------------
+- Sometimes we want to clear the git commit history before making the repository public, in this case follow the instructions:
+```
+rm -rf .git
+git config --global init.defaultBranch main
+git init
+git remote add origin https://github.com/test/test-repo.git
+git add .
+git commit -m "initial commit"
+git branch -M main
+git push -f origin main
+```
 --------------------------------------------------------------------------------------------------------
 
 - What is GitHub gist?
