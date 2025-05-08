@@ -78,6 +78,18 @@ git branch -M main
 git push -f origin main
 ```
 --------------------------------------------------------------------------------------------------------
+- How to cherrypick particular blob from whole PR?
+```
+https://github.com/test/test-repo/blob/15f7fdec5xxxxxxxxxxxxxx/roles/test/tasks/main.yaml
+```
+- if you want to extract just a specific file or change (blob) from a specific commit or PR:
+  - checkout the file from a specific commit
+```
+git checkout 15f7fdec5xxxxxxxxxxxxxx -- roles/test/tasks/main.yaml
+```
+- this pulls just that file from the commit into your current branch.
+- you can then `git add` and `git commit` it as part of your current work.
+--------------------------------------------------------------------------------------------------------
 
 - What is GitHub gist?
   - Gists provide a simple way to share code snippets with others. Every gist is a Git repository, which means that it can be forked and cloned [Guide Link](https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists).
