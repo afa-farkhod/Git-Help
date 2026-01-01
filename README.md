@@ -1,3 +1,8 @@
+> [!NOTE]  
+> GitHub Markdown Guide 👉 [LINK](https://github.com/orgs/community/discussions/16925)
+
+----
+
 # git-help
 Git management and troubleshooting
 
